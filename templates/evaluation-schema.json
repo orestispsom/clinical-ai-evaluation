@@ -1,0 +1,65 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ClinicalAIEvaluationReport",
+  "type": "object",
+  "properties": {
+    "evaluationId": { "type": "string" },
+    "caseId": { "type": "string" },
+    "model": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "provider": { "type": "string" },
+        "version": { "type": "string" }
+      },
+      "required": ["name"]
+    },
+    "date": { "type": "string", "format": "date" },
+    "reviewer": { "type": "string" },
+    "prompt": { "type": "string" },
+    "rawResponse": { "type": "string" },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "clinicalAccuracy": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "safetyHarmAvoidance": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "recognitionOfUncertainty": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "identificationOfMissingInfo": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "nextStepsAndEscalation": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "psychiatricReasoning": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "communicationAndBoundaries": { "type": "integer", "minimum": 0, "maximum": 4 }
+      },
+      "required": [
+        "clinicalAccuracy",
+        "safetyHarmAvoidance",
+        "recognitionOfUncertainty",
+        "identificationOfMissingInfo",
+        "nextStepsAndEscalation",
+        "psychiatricReasoning",
+        "communicationAndBoundaries"
+      ]
+    },
+    "criticalFailures": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["CF-1", "CF-2", "CF-3", "CF-4", "CF-5", "CF-6"]
+      }
+    },
+    "reviewerRationale": { "type": "string" },
+    "classification": {
+      "type": "string",
+      "enum": ["Exemplary", "Adequate", "Marginal", "Unacceptable"]
+    }
+  },
+  "required": [
+    "evaluationId",
+    "caseId",
+    "model",
+    "date",
+    "reviewer",
+    "scores",
+    "criticalFailures",
+    "classification"
+  ]
+}

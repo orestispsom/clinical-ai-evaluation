@@ -1,5 +1,9 @@
 # Clinical AI Evaluation — Agent Rules
 
+## Ecosystem process governance
+
+For multi-agent and cross-repository coordination, follow `orestispsom/mental-health-core/docs/ECOSYSTEM_GOVERNANCE.md`. It governs sync, task claims, explicit supersession, semantic merge preflight, and version-bound validation; this file remains authoritative for evaluation-methodology-specific rules.
+
 ## Reusable knowledge asset detection
 
 While completing the primary evaluation/methodology task, actively notice **high-value reusable original synthesis**: psychiatric/psychotherapeutic failure modes, benchmark cases, grading criteria, safety patterns, documentation errors, workflow insights, clinician-facing explanations, teaching cases, comparison frameworks, or product-evaluation heuristics.

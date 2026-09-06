@@ -18,3 +18,8 @@ At a natural pause, surface only genuinely strong candidates:
 Do not derail the primary evaluation task or automatically create derivative assets. During board preparation, prefer **note for later** unless capture is very small and useful for learning. Normally surface no more than 1–2 candidates per substantive session.
 
 Preserve evidence and provenance. Do not generalize from synthetic cases beyond their evidence, and do not repurpose proprietary, confidential, patient-identifying, source-locked, or copyrighted material into public/commercial assets.
+
+
+## Canonical shared clinical knowledge
+
+`mental-health-core` (https://github.com/orestispsom/mental-health-core) is the canonical layer for clinical concepts shared across this ecosystem. Reference concept IDs when a case turns on a shared clinical distinction, rather than re-deriving it. The rubric, dimensions, CF-* flags, case construction and evaluation schema stay here — the core supplies concepts, not method. See `MENTAL_HEALTH_CORE.md`.
